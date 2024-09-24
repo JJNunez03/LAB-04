@@ -1,0 +1,40 @@
+test_list_int (test.Test01_AddContact.test_list_int)
+*** Test01 *** GIVEN: c = {7145551111: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']} *** FUNCTION CALL: add_contact(c, id = 7145551212, first_name = 'Richard', last_name = 'Stallman') *** EXPECT: c = {7145551111: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates'], 7145551212: ['Richard', 'Stallman']} *** ... 
+ok
+test_list_int (test.Test02_AddContact.test_list_int)
+*** Test02 *** GIVEN: c = {7145551111: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']} *** FUNCTION CALL: r = add_contact(c, id = 7145551111, first_name = 'Richard', last_name = 'Stallman') *** EXPECT: r = 'error' *** ... 
+ok
+test_list_int (test.Test03_ModifyContact.test_list_int)
+*** Test03 *** GIVEN: c = {7145551111: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']} *** FUNCTION CALL: modify_contact(c, id = 7145551111, first_name = 'Richard', last_name = 'Stallman') *** EXPECT: c = {7145551111: ['Richard', 'Stallman'], 5625553333: ['Bill', 'Gates']} *** ... 
+ok
+test_list_int (test.Test04_ModifyContact.test_list_int)
+*** Test04 *** GIVEN: c = {7145551111: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']} *** FUNCTION CALL: r = modify_contact(c, id = 7145559999, first_name = 'Richard', last_name = 'Stallman') *** EXPECT: r = 'error' *** ... 
+ok
+test_list_int (test.Test05_DeleteContact.test_list_int)
+*** Test05 *** GIVEN: c = {7145551111: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']} *** FUNCTION CALL: delete_contact(c, id = 7145551111) *** EXPECT: c = {5625553333: ['Bill', 'Gates']} *** ... 
+ok
+test_list_int (test.Test06_DeleteContact.test_list_int)
+*** Test06 *** GIVEN: c = {7145551111: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']} *** FUNCTION CALL: r = delete_contact(c, id = 7145559999) *** EXPECT: r = 'error' *** ... 
+ok
+test_list_int (test.Test07_SortContacts.test_list_int)
+*** Test07 *** GIVEN: c = {7145551111: ['Alpha', 'Jobs'], 7145552222: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']} *** FUNCTION CALL: r = sort_contacts(c) *** EXPECT: r = {5625553333: ['Bill', 'Gates'], 7145551111: ['Alpha', 'Jobs'], 7145552222: ['Steve', 'Jobs']} *** ... 
+ok
+test_list_int (test.Test08_FindContact.test_list_int)
+*** Test08 *** GIVEN: c = {7145551111: ['Alpha', 'Jobs'], 7145552222: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']} *** FUNCTION CALL: r = find_contact(c, find = 'jobs') *** EXPECT: r = {7145551111: ['Alpha', 'Jobs'], 7145552222: ['Steve', 'Jobs']} *** ... 
+ok
+test_list_int (test.Test09_FindContact.test_list_int)
+*** Test09 *** GIVEN: c = {7145551111: ['Alpha', 'Jobs'], 7145552222: ['Steve', 'Jobs'], 5625553333: ['Bill', 'Gates']} *** FUNCTION CALL: r = find_contact(c, find = '5625553333') *** EXPECT: r = {5625553333: ['Bill', 'Gates']} *** ... 
+ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.001s
+
+OK
+
+
+
+
+
+
+
+
